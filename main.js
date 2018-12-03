@@ -22,10 +22,10 @@ game.addEventListener('click', (e) => {
         if (e.target.textContent === 'x') e.target.classList.add('x');
         if (e.target.textContent === 'o') e.target.classList.add('o');
     }
-    blk();
+    endGame();
 });
 
-let blk = () => {
+let endGame = () => {
     if (result.innerHTML === 'Крестики Выиграли!') {
         for (let i = 0; i < cell.length; i++) {
             if (cell[i].classList.length === 1) cell[i].classList.add('blank');
