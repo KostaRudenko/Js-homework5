@@ -1,0 +1,28 @@
+#game {
+    width: 225px;
+    margin: 50px auto;
+}
+header {
+    text-align: center;
+}
+#newGame {
+   display: block;
+    margin: 0 auto;
+}
+.cell {
+    box-sizing: border-box;
+    width: 75px;
+    height: 75px;
+    float: left;
+    border: 1px solid #797373;
+    cursor: pointer;
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#result {
+    text-align: center;
+}
