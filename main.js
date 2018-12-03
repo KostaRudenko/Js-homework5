@@ -22,7 +22,7 @@ game.addEventListener('click', (e) => {
 });
 
 let endGame = () => {
-    if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Нолики Выиграли!' ) {
+    if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Нолики Выиграли!') {
         for (let i = 0; i < cell.length; i++) {
             if (cell[i].classList.length === 1) cell[i].classList.add('blank');
         }
