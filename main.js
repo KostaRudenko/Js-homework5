@@ -30,7 +30,7 @@ let endGame = () => {
 };
 
 let checkWinner = () => {
-    // X
+    // Крестики
     if (cell[0].innerHTML === 'x' && cell[1].innerHTML === 'x' && cell[2].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
     if (cell[3].innerHTML === 'x' && cell[4].innerHTML === 'x' && cell[5].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
     if (cell[6].innerHTML === 'x' && cell[7].innerHTML === 'x' && cell[8].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
@@ -39,7 +39,7 @@ let checkWinner = () => {
     if (cell[2].innerHTML === 'x' && cell[5].innerHTML === 'x' && cell[8].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
     if (cell[0].innerHTML === 'x' && cell[4].innerHTML === 'x' && cell[8].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
     if (cell[2].innerHTML === 'x' && cell[4].innerHTML === 'x' && cell[6].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
-    // O
+    // Нолики
     if (cell[0].innerHTML === 'o' && cell[1].innerHTML === 'o' && cell[2].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
     if (cell[3].innerHTML === 'o' && cell[4].innerHTML === 'o' && cell[5].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
     if (cell[6].innerHTML === 'o' && cell[7].innerHTML === 'o' && cell[8].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
