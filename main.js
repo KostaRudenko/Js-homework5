@@ -17,6 +17,9 @@ game.addEventListener('click', (e) => {
         (e.target.textContent === 'x') ? e.target.classList.add('x') : e.target.classList.add('o');
         step++;
         checkWinner();
+
+        if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Ходят Крестики') result.style.color = '#ff605b';
+        if (result.innerHTML === 'Нолики Выиграли!' || result.innerHTML === 'Ходят Нолики') result.style.color = '#abfdab';
     }
     endGame();
 });
