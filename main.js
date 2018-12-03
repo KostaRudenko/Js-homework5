@@ -14,27 +14,19 @@ game.addEventListener('click', (e) => {
             e.target.innerHTML = 'o';
             result.innerHTML = 'Ходят Крестики';
         }
-
+        (e.target.textContent === 'x') ? e.target.classList.add('x') : e.target.classList.add('o');
         step++;
         checkWinner();
-        //if (step === 9) result.innerHTML = 'Ничья';
-
-        if (e.target.textContent === 'x') e.target.classList.add('x');
-        if (e.target.textContent === 'o') e.target.classList.add('o');
     }
     endGame();
 });
 
 let endGame = () => {
-    if (result.innerHTML === 'Крестики Выиграли!') {
+    if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Нолики Выиграли!' ) {
         for (let i = 0; i < cell.length; i++) {
             if (cell[i].classList.length === 1) cell[i].classList.add('blank');
         }
-    } else if (result.innerHTML === 'Нолики Выиграли!') {
-        for (let i = 0; i < cell.length; i++) {
-            if (cell[i].classList.length === 1) cell[i].classList.add('blank');
-        }
-    }
+     }
 };
 
 let checkWinner = () => {
