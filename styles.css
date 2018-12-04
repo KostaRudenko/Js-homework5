@@ -59,3 +59,6 @@ body  p:first-child {
 .x:hover {
     background: #ff9999;
 }
+.draw {
+    color: #fff!important;
+}

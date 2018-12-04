@@ -21,17 +21,10 @@ game.addEventListener('click', (e) => {
         if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Ходят Крестики') result.style.color = '#ff605b';
         if (result.innerHTML === 'Нолики Выиграли!' || result.innerHTML === 'Ходят Нолики') result.style.color = '#abfdab';
     }
+    checkDraw();
     endGame();
+
 });
-
-let endGame = () => {
-    if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Нолики Выиграли!') {
-        for (let i = 0; i < cell.length; i++) {
-            if (cell[i].classList.length === 1) cell[i].classList.add('blank');
-        }
-     }
-};
-
 let checkWinner = () => {
     // Крестики
     if (cell[0].innerHTML === 'x' && cell[1].innerHTML === 'x' && cell[2].innerHTML === 'x') result.innerHTML = 'Крестики Выиграли!';
@@ -51,6 +44,23 @@ let checkWinner = () => {
     if (cell[2].innerHTML === 'o' && cell[5].innerHTML === 'o' && cell[8].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
     if (cell[0].innerHTML === 'o' && cell[4].innerHTML === 'o' && cell[8].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
     if (cell[2].innerHTML === 'o' && cell[4].innerHTML === 'o' && cell[6].innerHTML === 'o') result.innerHTML = 'Нолики Выиграли!';
+};
+
+let checkDraw = () => {
+    if (cell[0].firstChild !== null && cell[1].firstChild !== null && cell[2].firstChild !== null &&
+        cell[3].firstChild !== null && cell[4].firstChild !== null && cell[5].firstChild !== null &&
+        cell[6].firstChild !== null && cell[7].firstChild !== null && cell[8].firstChild !== null) {
+            result.classList.add('draw');
+            result.innerHTML = 'Ничья';
+    }
+};
+
+let endGame = () => {
+    if (result.innerHTML === 'Крестики Выиграли!' || result.innerHTML === 'Нолики Выиграли!') {
+        for (let i = 0; i < cell.length; i++) {
+            if (cell[i].classList.length === 1) cell[i].classList.add('blank');
+        }
+    }
 };
 
 newGame.addEventListener('click', () => {
