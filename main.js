@@ -50,8 +50,10 @@ let checkDraw = () => {
     if (cell[0].firstChild !== null && cell[1].firstChild !== null && cell[2].firstChild !== null &&
         cell[3].firstChild !== null && cell[4].firstChild !== null && cell[5].firstChild !== null &&
         cell[6].firstChild !== null && cell[7].firstChild !== null && cell[8].firstChild !== null) {
+        if (result.innerHTML !== 'Нолики Выиграли!' && result.innerHTML !== 'Крестики Выиграли!') {
             result.classList.add('draw');
             result.innerHTML = 'Ничья';
+        }
     }
 };
 
